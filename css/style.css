@@ -495,7 +495,7 @@ footer {
 
 @keyframes rotar {
     0% {
-      background-image: url('../img/portada5.jpg');
+      background-image: url('../img/logo.webp');
     }
     25% {
       background-image: url('../img/portada2.jpg');
@@ -510,3 +510,147 @@ footer {
       background-image: url('../img/portada4.jpg');
     }
   }
+
+  /* Responsive para tablets (hasta 1024px) */
+@media (max-width: 1024px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 20px;
+        padding: 10px 0;
+    }
+
+    .logo {
+        width: 20%;
+    }
+
+    main {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    section {
+        padding: 0 10px;
+    }
+
+    .dengue-image,
+    .contenido {
+        width: 90%;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .container-form {
+        padding: 4rem 2rem;
+        background-size: cover;
+    }
+
+    .social-media {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .form-card {
+        max-width: 90%;
+    }
+}
+
+
+/* Responsive para móviles (hasta 600px) */
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .logo {
+        width: 40%;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 15px;
+        width: 100%;
+    }
+
+    nav a {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .idiomas {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .portada {
+        padding: 60px 20px;
+        background-size: cover;
+    }
+
+    main {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    #dengue h2,
+    #health-tips h2,
+    #alimentacion h2 {
+        font-size: 20px;
+    }
+
+    .dengue-info h3 {
+        font-size: 2rem;
+    }
+
+    #health-tips li,
+    #alimentacion li {
+        font-size: 14px;
+        padding: 0.8rem;
+    }
+
+    .dengue-image {
+        max-width: 100%;
+    }
+
+    .cookies {
+        padding: 20px;
+        font-size: 14px;
+    }
+
+    .footer-container {
+        padding: 10px;
+    }
+
+    .social-icon {
+        font-size: 36px;
+    }
+
+    .container-form {
+        padding: 2rem 1rem;
+    }
+
+    .form-card {
+        padding: 1rem;
+        font-size: 14px;
+    }
+
+    .btn-telegram {
+        padding: 8px 12px;
+        font-size: 14px;
+    }
+
+    .widget {
+        bottom: 60px;
+        right: 10px;
+    }
+}
+
