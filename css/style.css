@@ -474,6 +474,38 @@ footer {
 .p-checkbox {
     margin-right: 0.5rem;
 }
+.social-container {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.social-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45px;
+    height: 45px;
+    background-color: #333;
+    color: white;
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: 20px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icon:hover {
+    transform: scale(1.1);
+}
+
+/* Colores específicos por red social (opcional) */
+.social-icon:hover .fa-facebook-f { color: #3b5998; }
+.social-icon:hover .fa-twitter { color: #1da1f2; }
+.social-icon:hover .fa-instagram { color: #e4405f; }
+.social-icon:hover .fa-linkedin-in { color: #0077b5; }
+
 
 
 /* Responsividad */
