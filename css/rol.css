@@ -1,0 +1,288 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    margin-left: 100px;
+    gap: 50px;
+}
+.logo {
+    width: 20%;
+}
+.header {
+    background-color: white(217, 220, 225);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 1);
+    color: rgb(5, 5, 5);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Barra lateral */
+.sidebar {
+    width: 60px;
+    background-color: #333;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: width 0.3s ease;
+}
+
+/* Contenedor de cada ícono */
+.icon-container {
+    margin: 20px 0;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    transition: margin-left 0.3s ease;
+}
+
+/* Iconos */
+.icon-container i {
+    color: rgb(2, 249, 27);
+    font-size: 24px;
+    transition: opacity 0.7s ease; /* Opacidad suave */
+    opacity: 0.3; /* Aseguramos que los íconos sean visibles pero un poco transparentes al estar contraídos */
+}
+
+/* Tooltip oculto por defecto */
+.tooltip {
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    transform: translateY(-50%);
+    background-color: #333;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    white-space: nowrap;
+    opacity: 0.7;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+/* Mostrar tooltip y expandir la barra lateral */
+.sidebar:hover {
+    width: 200px; /* Barra se expande */
+}
+
+/* Mostrar el texto (tooltip) cuando pasas el mouse sobre el ícono */
+.icon-container:hover .tooltip {
+    opacity: 0.7;
+    visibility: visible; /* Mostrar tooltip al hacer hover */
+}
+
+/* Opcional: Los iconos se hacen más visibles al pasar el ratón */
+.sidebar:hover .icon-container i {
+    opacity: 0.7;
+}
+
+.sidebar:not(:hover) .icon-container i {
+    opacity: 0.1; /* Los iconos son un poco transparentes cuando la barra no está expandida */
+}
+a{
+    text-decoration: none;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 30px;
+    background-color: antiquewhite;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    max-width: 90%;
+    width: 500px;
+    text-align: center;
+}
+.info h2 {
+    font-size: 2rem;
+    color: #2d3b44;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+.info p {
+    font-size: 1.2rem;
+    color: #5a6d7f;
+    line-height: 1.6;
+}
+/* Estilo responsivo (ajuste para pantallas pequeñas) */
+@media (max-width: 600px) {
+    .info {
+        width: 90%; /* El contenedor se adapta al 90% del ancho de la pantalla */
+    }
+    .info h2 {
+        font-size: 1.5rem; /* Ajusta el tamaño del título */
+    }
+    .info p {
+        font-size: 1rem; /* Ajusta el tamaño del párrafo */
+    }
+}
+
+/* Estilos para la tabla de citas */
+.tabla {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.tabla th, .tabla td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.tabla th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+}
+
+.tabla td {
+    background-color: #fff;
+}
+
+.tabla button {
+    padding: 5px 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.tabla button:hover {
+    background-color: #45a049;
+}
+
+/* Estilos para el contenido principal */
+#contenido {
+    margin-left: 250px;
+    padding: 20px;
+}
+
+/* Estilos para las secciones */
+.seccion {
+    display: none;
+}
+
+/* Estilo para la sección de "Inicio" */
+#inicio {
+    display: block;
+}
+/* Estilos para la sección de búsqueda */
+#buscar {
+    background-color: #f4f4f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#buscar h1 {
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 28px;
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+form label {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+#buscarCita {
+    padding: 10px;
+    width: 80%;
+    max-width: 500px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s ease-in-out;
+}
+
+#buscarCita:focus {
+    border-color: #4CAF50;
+    outline: none;
+}
+
+button {
+    padding: 12px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 80%;
+    max-width: 500px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+#resultadoBusqueda {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    display: none;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#resultadoBusqueda ul {
+    list-style: none;
+    padding: 0;
+}
+
+#resultadoBusqueda ul li {
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+    font-size: 16px;
+    color: #333;
+}
+
+#resultadoBusqueda ul li:last-child {
+    border-bottom: none;
+}
+
+#resultadoBusqueda p {
+    color: #f44336;
+    font-size: 16px;
+    text-align: center;
+}
+
