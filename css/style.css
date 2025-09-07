@@ -61,6 +61,18 @@ nav a:hover {
     border-radius: 40px;
     color: black;
 }
+.whatsapp-button {
+    display: inline-block;
+    background-color: #25D366;
+    color: white;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: background-color 0.3s ease;
+  }
 
 .portada{
     background-repeat: no-repeat;
@@ -70,30 +82,6 @@ nav a:hover {
     padding: 120px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 1);
 
-}
-.cookies {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: rgba(86, 123, 188, 0.5);
-    color: white;
-    padding: 40px;
-    text-align: center;
-    z-index: 1000;
-}
-
-.cookie-link {
-    color: #0077ff;
-    text-decoration: none;
-}
-
-#accept-cookies{
-    background: #8dabcd;;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    border-radius: 10px;
 }
 
 main {
@@ -112,77 +100,8 @@ section{
     align-items: center;
     text-align: center;
 }
-#dengue {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 20px;
-    background: #fff;
-    padding: 10px;
-    margin: 2rem 0;
-    text-align: center;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
 
-#dengue h2 {
-    color: rgb(20, 135, 198);
-    font-size: 24px;
-    margin-bottom: 10px;
-}
 
-.dengue-section p {
-    font-size: 1.1rem;
-    line-height: 1.6;
-}
-
-.dengue-image {
-    width: 100%;
-    max-width: 600px;
-    margin: 20px 0;
-    border-radius: 8px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.dengue-info ul {
-    list-style-type: disc;
-    margin-left: 20px;
-}
-
-.dengue-info h3 {
-    font-size: 5rem;
-    margin-top: 20px;
-}
-
-.dengue-actions ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.dengue-actions a {
-    color: #2980b9;
-    text-decoration: none;
-}
-
-.dengue-actions a:hover {
-    text-decoration: underline;
-}
-
-.news-article {
-    margin-bottom: 20px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-.news-article h3 {
-    margin: 0 0 10px;
-}
-.contenido{
-    margin: 0px 40px 0px;
-    text-align: center;
-}
 h1{
     padding: 10px;
     font-family: Georgia, 'Times New Roman', Times, serif;
