@@ -495,13 +495,13 @@ footer {
 
 @keyframes rotar {
     0% {
-      background-image: url('../img/portada5.jpeg');
+      background-image: url('../img/portada5.jpg');
     }
     25% {
       background-image: url('../img/portada2.jpg');
     }
     50% {
-      background-image: url('../img/portada5.jpeg');
+      background-image: url('../img/portada5.jpg');
     }
     75% {
         background-image: url('../img/portada3.jpg');
